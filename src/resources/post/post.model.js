@@ -11,8 +11,8 @@ class Post {
   }
 
   static toResponse(post) {
-    const { id, title, text, createdAt, userId } = post;
-    return { id, title, text, createdAt, userId };
+    const { id, title, text, createdAt, userId, comments } = post;
+    return { id, title, text, createdAt, userId, comments };
   }
 }
 

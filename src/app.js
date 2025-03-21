@@ -1,6 +1,7 @@
 import express from 'express';
 
 import userRouter from './resources/users/user.router.js';
+import postRouter from './resources/post/post.router.js';
 
 const app = express();
 
@@ -15,5 +16,6 @@ app.use('/', (req, res, next) => {
 });
 
 app.use('/users', userRouter);
+app.use('/posts', postRouter);
 
 export default app;
