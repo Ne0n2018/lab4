@@ -1,7 +1,13 @@
 import { v4 as uuidv4 } from 'uuid';
 
 class Comment {
-  constructor({ id = uuidv4(), text, createdAt = Date.now(), userId, postId }) {
+  constructor({
+    id = uuidv4(),
+    text = 'text',
+    createdAt = Date.now(),
+    userId = uuidv4(),
+    postId = uuidv4(),
+  }) {
     this.id = id;
     this.text = text;
     this.createdAt = createdAt;

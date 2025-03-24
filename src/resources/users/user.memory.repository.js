@@ -1,7 +1,6 @@
 import { v4 as uuidv4 } from 'uuid';
 import User from './user.model.js';
 
-// Хардкоженные данные пользователей
 const users = [
   new User({
     id: uuidv4(),
@@ -52,22 +51,6 @@ const updateUser = async (id, updatedUserData) => {
 };
 
 const deleteUser = async (id) => {
-  // // Удаляем связанные посты
-  // const userPosts = posts.filter(post => post.userId === id);
-  // userPosts.forEach(post => {
-  //   // Удаляем комментарии, связанные с постом
-  //   const postComments = comments.filter(comment => comment.postId === post.id);
-  //   postComments.forEach(comment => {
-  //     const commentIndex = comments.findIndex(c => c.id === comment.id);
-  //     if (commentIndex !== -1) comments.splice(commentIndex, 1);
-  //   });
-
-  //   // Удаляем сам пост
-  //   const postIndex = posts.findIndex(p => p.id === post.id);
-  //   if (postIndex !== -1) posts.splice(postIndex, 1);
-  // });
-
-  // Удаляем самого пользователя
   const userIndex = users.findIndex((user) => user.id === id);
   if (userIndex !== -1) {
     return users.splice(userIndex, 1)[0];

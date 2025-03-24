@@ -2,6 +2,7 @@ import express from 'express';
 
 import userRouter from './resources/users/user.router.js';
 import postRouter from './resources/post/post.router.js';
+import commentRouter from './resources/comment/comment.router.js';
 
 const app = express();
 
@@ -17,5 +18,6 @@ app.use('/', (req, res, next) => {
 
 app.use('/users', userRouter);
 app.use('/posts', postRouter);
+app.use('/comments', commentRouter);
 
 export default app;

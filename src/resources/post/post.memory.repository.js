@@ -1,4 +1,3 @@
-// import { v4 as uuidv4 } from 'uuid';
 import Post from './post.model.js';
 
 const post = [new Post({})];
